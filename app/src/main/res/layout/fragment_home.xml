@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/home_background_iv"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_default_4_x_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/home_btn_setting_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_main_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_main_ticket"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_main_ticket"
+            app:layout_constraintEnd_toStartOf="@id/home_btn_setting_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_main_nugu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_nugu"
+            app:layout_constraintEnd_toStartOf="@id/btn_main_ticket"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_background_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="포근하게 덮어주는 꿈의\n목소리"
+            android:lineSpacingExtra="-8dp"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_btn_setting_iv" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_panel_play_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_background_title_tv" />
+
+        <ImageView
+            android:id="@+id/home_background_music_iv1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/img_album_exp"
+            app:layout_constraintBottom_toBottomOf="@id/home_background_iv"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/home_background_music_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="잠이 안온다"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/home_background_music_name_tv1"
+            app:layout_constraintStart_toEndOf="@id/home_background_music_iv1"
+            app:layout_constraintTop_toTopOf="@id/home_background_music_iv1" />
+
+        <TextView
+            android:id="@+id/home_background_music_name_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="젠(Zen)"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/home_background_music_iv1"
+            app:layout_constraintStart_toEndOf="@id/home_background_music_iv1"
+            app:layout_constraintTop_toBottomOf="@+id/home_background_music_tv1" />
+
+        <ImageView
+            android:id="@+id/home_background_music_iv2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/img_album_exp"
+            app:layout_constraintBottom_toTopOf="@+id/home_background_music_iv1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/home_background_music_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="잠이 안온다"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/home_background_music_name_tv2"
+            app:layout_constraintStart_toEndOf="@id/home_background_music_iv2"
+            app:layout_constraintTop_toTopOf="@id/home_background_music_iv2" />
+
+        <TextView
+            android:id="@+id/home_background_music_name_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="젠(Zen)"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/home_background_music_iv2"
+            app:layout_constraintStart_toEndOf="@id/home_background_music_iv2"
+            app:layout_constraintTop_toBottomOf="@id/home_background_music_tv2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="총 15곡 2019.11.11"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/home_background_music_iv2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/home_todaymusic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="오늘 발매 음악"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_background_iv" />
+
+        <ImageView
+            android:layout_width="23sp"
+            android:layout_height="23sp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/btn_arrow_more"
+            app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_tv"
+            app:layout_constraintStart_toEndOf="@id/home_todaymusic_tv"
+            app:layout_constraintTop_toTopOf="@id/home_todaymusic_tv" />
+
+        <TextView
+            android:id="@+id/home_todaymusic_abroad_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="해외"
+            android:textColor="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_background_iv" />
+
+        <TextView
+            android:id="@+id/home_todaymusic_domestic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="국내"
+            android:textColor="@color/gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/home_todaymusic_abroad_tv"
+            app:layout_constraintTop_toBottomOf="@id/home_background_iv" />
+
+        <TextView
+            android:id="@+id/home_todaymusic_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="종합"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/home_todaymusic_domestic_tv"
+            app:layout_constraintTop_toBottomOf="@id/home_background_iv" />
+
+        <HorizontalScrollView
+            android:id="@+id/home_todaymusic_background_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_todaymusic_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/home_todaymusic_album_iv1"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_album_exp2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="10dp"/>
+
+                <ImageView
+                    android:id="@+id/home_todaymusic_album_btimg_iv1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_album_iv1"
+                    app:layout_constraintEnd_toEndOf="@id/home_todaymusic_album_iv1" />
+
+                <TextView
+                    android:id="@+id/home_todaymusic_album_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LILAC"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_iv1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이유(IU)"
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_tv1" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/home_todaymusic_album_iv2"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_album_exp2"
+                    app:layout_constraintStart_toEndOf="@id/home_todaymusic_album_iv1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/home_todaymusic_album_btimg_iv2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_album_iv2"
+                    app:layout_constraintEnd_toEndOf="@id/home_todaymusic_album_iv2" />
+
+                <TextView
+                    android:id="@+id/home_todaymusic_album_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_iv2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_tv2" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/home_todaymusic_album_iv3"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_album_exp2"
+                    app:layout_constraintStart_toEndOf="@id/home_todaymusic_album_iv2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="10dp" />
+
+                <ImageView
+                    android:id="@+id/home_todaymusic_album_btimg_iv3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_album_iv3"
+                    app:layout_constraintEnd_toEndOf="@id/home_todaymusic_album_iv3" />
+
+                <TextView
+                    android:id="@+id/home_todaymusic_album_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_iv3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_tv3" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/home_todaymusic_album_iv4"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_album_exp2"
+                    app:layout_constraintStart_toEndOf="@id/home_todaymusic_album_iv3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="10dp" />
+
+                <ImageView
+                    android:id="@+id/home_todaymusic_album_btimg_iv4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_album_iv4"
+                    app:layout_constraintEnd_toEndOf="@id/home_todaymusic_album_iv4" />
+
+                <TextView
+                    android:id="@+id/home_todaymusic_album_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv4"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_iv4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_todaymusic_album_iv4"
+                    app:layout_constraintTop_toBottomOf="@id/home_todaymusic_album_tv4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/home_popacusticmusic_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_home_viewpager_exp"
+            app:layout_constraintTop_toBottomOf="@+id/home_todaymusic_background_sv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/home_podcast_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="매일 들어도 좋은 팟캐스트"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_popacusticmusic_iv" />
+
+        <HorizontalScrollView
+            android:id="@+id/home_podcast_background_sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_podcast_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_iv1"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_potcast_exp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_btimg_iv1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_podcast_album_iv1"
+                    app:layout_constraintEnd_toEndOf="@id/home_podcast_album_iv1" />
+
+                <TextView
+                    android:id="@+id/home_podcast_album_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_iv1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수 "
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_tv1" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_iv2"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_potcast_exp"
+                    app:layout_constraintStart_toEndOf="@id/home_podcast_album_iv1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_btimg_iv2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_podcast_album_iv2"
+                    app:layout_constraintEnd_toEndOf="@id/home_podcast_album_iv2" />
+
+                <TextView
+                    android:id="@+id/home_podcast_album_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_iv2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_tv2" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_iv3"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_potcast_exp"
+                    app:layout_constraintStart_toEndOf="@id/home_podcast_album_iv2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="20dp" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_btimg_iv3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_podcast_album_iv3"
+                    app:layout_constraintEnd_toEndOf="@id/home_podcast_album_iv3" />
+
+                <TextView
+                    android:id="@+id/home_podcast_album_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_iv3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_tv3" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_iv4"
+                    android:layout_width="135dp"
+                    android:layout_height="135dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_potcast_exp"
+                    app:layout_constraintStart_toEndOf="@id/home_podcast_album_iv3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/home_podcast_album_btimg_iv4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/widget_black_play"
+                    app:layout_constraintBottom_toBottomOf="@id/home_podcast_album_iv4"
+                    app:layout_constraintEnd_toEndOf="@id/home_podcast_album_iv4" />
+
+                <TextView
+                    android:id="@+id/home_podcast_album_tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv4"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_iv4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수"
+                    android:layout_marginTop="3dp"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_podcast_album_iv4"
+                    app:layout_constraintTop_toBottomOf="@id/home_podcast_album_tv4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/home_vediocollection_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="비디오 콜렉션"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_podcast_background_sv" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_vediocollection_sv"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/home_vediocollection_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/home_vediocollection_album_iv1"
+                    android:layout_width="280dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_video_exp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/home_vediocollection_album_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_iv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_iv1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수 "
+                    android:textAlignment="center"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_tv1"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_tv1" />
+
+                <ImageView
+                    android:id="@+id/home_vediocollection_album_iv2"
+                    android:layout_width="280dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_video_exp"
+                    app:layout_constraintStart_toEndOf="@id/home_vediocollection_album_iv1"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/home_vediocollection_album_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_iv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_iv2"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수 "
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_tv2"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_tv2" />
+
+                <ImageView
+                    android:id="@+id/home_vediocollection_album_iv3"
+                    android:layout_width="280dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_video_exp"
+                    app:layout_constraintStart_toEndOf="@id/home_vediocollection_album_iv2"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/home_vediocollection_album_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_iv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_iv3"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가수 "
+                    android:textAlignment="center"
+                    android:layout_marginTop="3dp"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/home_vediocollection_album_tv3"
+                    app:layout_constraintTop_toBottomOf="@id/home_vediocollection_album_tv3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/home_favorflo_iv"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/discovery_banner_aos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_vediocollection_sv" />
+
+        <ImageView
+            android:id="@+id/home_polyad_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_home_viewpager_exp2"
+            app:layout_constraintTop_toBottomOf="@+id/home_favorflo_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/home_group_icon_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/home_polyad_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/test1"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/home_icon_facebook_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="80dp"
+                android:layout_toLeftOf="@+id/test1"
+                android:src="@drawable/ic_main_facebook_btn" />
+
+            <ImageView
+                android:id="@+id/home_icon_instagram_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/test1"
+                android:src="@drawable/ic_main_instagram_btn" />
+            <ImageView
+                android:id="@+id/home_icon_youtube_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_main_youtube_btn"
+                android:layout_toRightOf="@id/test1"
+                android:layout_marginLeft="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/home_icon_twitter_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_main_twitter_btn"
+                android:layout_toRightOf="@id/test1"
+                android:layout_marginLeft="80dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_information_company_tv"
+            android:textSize="12sp"
+            android:text="(주)드림어스컴퍼티 사업자 정보"
+            app:layout_constraintTop_toBottomOf="@+id/home_group_icon_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+        <ImageView
+            android:layout_width="15sp"
+            android:layout_height="15sp"
+            android:src="@drawable/btn_arrow_more"
+            app:layout_constraintTop_toTopOf="@+id/home_information_company_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/home_information_company_tv"
+            app:layout_constraintStart_toEndOf="@id/home_information_company_tv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- dp, sp사용 권장
+              linearLayout : 옆으로쌓음
+              RelativeLayout 상대적인
+              FrameLayout : 겹처짐
+              GridLayout : 격자무늬
+              TableLayout : 테이블 레이아웃
+              ConstraitLayout : 주로씀 **
+
+              자식들에게 제약을 걸어줘야함.(위아래, 양옆하나씩)
+              체인을 걸수 있음.
+
+              이미지 뷰 -> 스케일타입이미지 맞춤
+              mirroid (핸드폰 컴연결)
+          -->
+</ScrollView>
