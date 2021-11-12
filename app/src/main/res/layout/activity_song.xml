@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="무제"
+        android:text="@string/title_music"
         android:textColor="@color/black"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -75,7 +75,7 @@
         android:id="@+id/song_titlearrow_iv"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
         android:background="@drawable/btn_arrow_more"
         app:layout_constraintBottom_toBottomOf="@id/song_singer_tv"
         app:layout_constraintStart_toEndOf="@id/song_singer_tv"
@@ -83,8 +83,8 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/song_mainimg_iv"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
@@ -98,13 +98,14 @@
 
     <TextView
         android:id="@+id/song_lyrics_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="나라는 꽃가루에\n눈이 따끔해 아야"
+        android:text="나라는 꽃가루에 눈이 따끔해 아야"
         android:textColor="@color/gray"
         android:textSize="14sp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/song_following_iv"
@@ -115,11 +116,11 @@
         android:id="@+id/song_following_iv"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginRight="70dp"
+        android:layout_marginEnd="70dp"
         android:background="@drawable/ic_my_like_off"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/song_progrress_bar_pb"
+        app:layout_constraintBottom_toTopOf="@+id/song_seekbar"
         android:layout_marginBottom="15dp"
         />
 
@@ -133,20 +134,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/song_following_iv" />
 
-    <ProgressBar
+<!--    <ProgressBar-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="3dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:id="@+id/song_progrress_bar_pb"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/song_shuffle_iv"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:progressDrawable="@drawable/bar_player"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        android:indeterminate="false"-->
+<!--        android:progress="25"-->
+<!--        />-->
+    <SeekBar
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_height="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/song_progrress_bar_pb"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/song_seekbar"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:background="@null"
+        android:progressBackgroundTint="@color/song_gray"
+        android:progressTint="@color/light_blue2"
         app:layout_constraintBottom_toTopOf="@+id/song_shuffle_iv"
         app:layout_constraintStart_toStartOf="parent"
-        android:progressDrawable="@drawable/bar_player"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:indeterminate="false"
-        android:progress="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:progress="0"
+        android:max="1000"
+        android:thumb="@android:color/transparent"
+
         />
 
     <TextView
@@ -155,19 +177,20 @@
         android:id="@+id/song_time_now_tv"
         android:text="00:00"
         android:textColor="@color/light_blue"
-        app:layout_constraintTop_toBottomOf="@id/song_progrress_bar_pb"
+        app:layout_constraintTop_toBottomOf="@id/song_seekbar"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
         android:textSize="13sp"
         android:fontFamily="sans-serif-medium"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/song_time_end_tv"
-        android:text="00:00"
+        android:text="03:12"
         android:textColor="@color/song_gray"
-        app:layout_constraintTop_toBottomOf="@id/song_progrress_bar_pb"
+        app:layout_constraintTop_toBottomOf="@id/song_seekbar"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="20dp"
         android:layout_marginTop="5dp"
@@ -226,6 +249,19 @@
         android:layout_height="60dp"
         android:id="@+id/song_repeat_iv_1"
         android:background="@drawable/nugu_btn_repeat_inactive_1"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toTopOf="@id/song_insta_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/song_repeat_iv_2"
+        android:background="@drawable/nugu_btn_repeat_inactive_2"
         android:scaleType="centerCrop"
         android:layout_marginBottom="35dp"
         android:layout_marginLeft="10dp"

@@ -4,16 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <FrameLayout
         android:id="@+id/main_frm"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
-        app:layout_constraintBottom_toTopOf="@id/main_player_layout"
+        app:layout_constraintBottom_toTopOf="@id/main_song_seekbar"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:id="@+id/main_song_seekbar"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progressDrawable="@drawable/seekbar"
+        app:layout_constraintBottom_toTopOf="@+id/main_player_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:progress="0"
+        android:max="1000"
+        android:thumb="@android:color/transparent"
+
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main_player_layout"
@@ -23,8 +39,9 @@
         android:paddingVertical="5dp"
         android:background="#F9F9F9"
         >
-        <LinearLayout
 
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

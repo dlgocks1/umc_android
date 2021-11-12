@@ -24,7 +24,11 @@
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/album_btcolor_selector.xml" value="0.30632911392405066" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/album_txcolor_selector.xml" value="0.30632911392405066" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/bar_player.xml" value="0.32149122807017544" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/bg_appcolor.xml" value="0.24487179487179486" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/bg_appcolorgray.xml" value="0.24487179487179486" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/blue_indicator.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/border_bottom_color.xml" value="0.30632911392405066" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/gray_indicator.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.32149122807017544" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/look_bt_selector.xml" value="0.2388157894736842" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/look_btcolor_selector.xml" value="0.30632911392405066" />
@@ -37,13 +41,31 @@
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/round_blue.xml" value="0.2388157894736842" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/round_white.xml" value="0.2388157894736842" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/round_whitegray.xml" value="0.22521367521367522" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/seekbar.xml" value="0.24487179487179486" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/drawable/selector_indicator.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/activity_song.xml" value="0.22" />
-        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_album.xml" value="0.22" />
-        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/activity_song.xml" value="0.33" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/activity_splash.xml" value="0.14661654135338345" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_album.xml" value="0.25" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_albumcoodinate.xml" value="0.2311965811965812" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_albumvedio.xml" value="0.1" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_banner.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_home.xml" value="0.2819277108433735" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_homeimg.xml" value="0.2311965811965812" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_item_album.xml" value="0.1451545530492899" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_locker.xml" value="0.22861842105263158" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_lockersongfile.xml" value="0.2282051282051282" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_look.xml" value="0.25" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_moreinfo.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_recorded.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_savedsong.xml" value="0.2282051282051282" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_search.xml" value="0.23092105263157894" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_song.xml" value="0.2299145299145299" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/fragment_vedio.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/item_album.xml" value="0.33" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/item_locker.xml" value="0.25" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/layout/item_songfragment.xml" value="0.33" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject/BottomNaviTemlate/flo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.297008547008547" />
         <entry key="..\:/Users/cksgo/Downloads/BottomNaviTemlate/BottomNaviTemplate/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/cksgo/Downloads/BottomNaviTemlate/BottomNaviTemplate/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />
@@ -56,5 +78,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2311965811965812" />
+      </ProjectState>
+    </option>
   </component>
 </project>

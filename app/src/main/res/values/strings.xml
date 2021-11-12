@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">flo</string>
+    <string name="title_music">무야호</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

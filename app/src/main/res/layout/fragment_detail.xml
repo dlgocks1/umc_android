@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SongFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/lilac_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="앨범명"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/lilac_titleinfo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="IU 5th Album 'LILAC'"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lilac_title_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lilac_title_tv" />
+
+            <TextView
+                android:id="@+id/lilac_artistinfo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="아이유 (IU)"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lilac_artist_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lilac_artist_tv" />
+
+            <TextView
+                android:id="@+id/lilac_artist_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="아티스트"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_title_tv" />
+
+
+            <TextView
+                android:id="@+id/lilac_balmesa_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="발매사"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_artist_tv" />
+
+            <TextView
+                android:id="@+id/lilac_company_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="기획사"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_balmesa_tv" />
+
+            <TextView
+                android:id="@+id/lilac_balmesainfo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="카카오엔터테인먼트"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lilac_balmesa_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lilac_balmesa_tv" />
+
+            <TextView
+                android:id="@+id/lilac_companyinfo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:text="EDAM엔터테인먼트"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lilac_company_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lilac_company_tv" />
+
+            <TextView
+                android:id="@+id/lilac_albuminfo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="앨범정보"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_company_tv" />
+
+
+            <TextView
+                android:id="@+id/lilac_albuminfotext_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="40dp"
+                android:text="‘아이유(IU)’ 정규 5집 [LILAC] \n \n “안녕 꽃잎 같은 안녕” \n“내 맘에 아무 의문이 없어 난 이 다음으로 가요” \n
+\n  20대의 마지막에 대해 화려한 ‘인사’를 예고했던 아이유가 봄 내음과 함께 다섯 번째 정규앨범 [LILAC]으로 돌아왔다. 4년 만에 선보이는 정규앨범 [LILAC]은 스무 살의 솔직하고 풋풋한 감성을 담아 발표했던 20대의 첫 앨범 [스무 살의 봄]과는 달리, 지금껏 지나온 20대를 10개의 트랙에 다채로운 시각으로 풀어내 그동안의 성숙해진 감성을 오롯이 담았다.\n
+\n
+또한 이번 앨범에는 국내 최고의 뮤직비디오 프로덕션인 VM프로젝트(Celebrity, Flu), 플립이블(라일락, 에필로그), 써니비주얼(Coin)이 함께 참여하여 각각의 개성 있고 감각적인 영상들과 아이유의 음악이 만나 막강한 시너지를 발휘했다.\n\n
+앨범명과 함께 타이틀 곡 제목에 사용한 ‘라일락’ 꽃의 꽃말은 ‘첫사랑’, 그리고 ‘젊은 날의 추억’이다. 20대의 첫 페이지부터 마지막 페이지까지 지켜봐 준 모든 이들에게 감사함을 담아 화려하고, 그리고 조금은 쓸쓸하기도 한 아이유만의 인사를 전한다.
+\n"
+
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_albuminfo_tv" />
+
+            <TextView
+                android:id="@+id/lilac_albuminfotext_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="40dp"
+                android:text="‘아이유(IU)’ 정규 5집 [LILAC] \n \n “안녕 꽃잎 같은 안녕” \n“내 맘에 아무 의문이 없어 난 이 다음으로 가요” \n
+\n  20대의 마지막에 대해 화려한 ‘인사’를 예고했던 아이유가 봄 내음과 함께 다섯 번째 정규앨범 [LILAC]으로 돌아왔다. 4년 만에 선보이는 정규앨범 [LILAC]은 스무 살의 솔직하고 풋풋한 감성을 담아 발표했던 20대의 첫 앨범 [스무 살의 봄]과는 달리, 지금껏 지나온 20대를 10개의 트랙에 다채로운 시각으로 풀어내 그동안의 성숙해진 감성을 오롯이 담았다.\n
+\n
+또한 이번 앨범에는 국내 최고의 뮤직비디오 프로덕션인 VM프로젝트(Celebrity, Flu), 플립이블(라일락, 에필로그), 써니비주얼(Coin)이 함께 참여하여 각각의 개성 있고 감각적인 영상들과 아이유의 음악이 만나 막강한 시너지를 발휘했다.\n\n
+앨범명과 함께 타이틀 곡 제목에 사용한 ‘라일락’ 꽃의 꽃말은 ‘첫사랑’, 그리고 ‘젊은 날의 추억’이다. 20대의 첫 페이지부터 마지막 페이지까지 지켜봐 준 모든 이들에게 감사함을 담아 화려하고, 그리고 조금은 쓸쓸하기도 한 아이유만의 인사를 전한다.
+\n"
+
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lilac_title_tv"
+                app:layout_constraintTop_toBottomOf="@+id/lilac_albuminfotext_tv" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
