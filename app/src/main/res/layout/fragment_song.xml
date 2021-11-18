@@ -30,18 +30,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:background="@drawable/round_whitegray"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_marginTop="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingBottom="3dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
                     >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="내 취향 MIX"
                         android:background="@color/white_gray"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:fontFamily="sans-serif"
                         android:textColor="@color/black"
                         android:layout_gravity="center"
@@ -67,17 +67,18 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/btn_playlist_select_off"
                     android:id="@+id/album_checkedicon_iv"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/album_myfaver_layout"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginLeft="15dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="전체선택"
                     android:fontFamily="sans-serif-black"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@id/album_checkedicon_iv"
                     app:layout_constraintTop_toTopOf="@id/album_checkedicon_iv"
                     app:layout_constraintBottom_toBottomOf="@id/album_checkedicon_iv"
@@ -97,7 +98,7 @@
                     android:id="@+id/album_heartotal_tv"
                     android:text="전체듣기"
                     android:fontFamily="sans-serif-black"
-                    android:textSize="12sp"
+                    android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@id/album_checkedicon_iv"
                     app:layout_constraintBottom_toBottomOf="@id/album_checkedicon_iv"
@@ -106,6 +107,7 @@
 
                  <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/song_widget_rcv"
+                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

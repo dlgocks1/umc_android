@@ -2,14 +2,16 @@ package com.example.flo.adaptors
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.flo.activity.MainActivity
 import com.example.flo.databinding.ItemLockerBinding
 import com.example.flo.databinding.ItemSongfragmentBinding
 import com.example.flo.dataclass.Album_Locker
+import com.example.flo.dataclass.Album_Song
 
-class AlbumInSongAdapter(private val albumList : ArrayList<Album_Locker>) : RecyclerView.Adapter<AlbumInSongAdapter.Viewholder>(){
+class AlbumInSongAdapter(private val albumList : ArrayList<Album_Song>) : RecyclerView.Adapter<AlbumInSongAdapter.Viewholder>(){
 
     interface MyItemClickListener{
         fun onChangeMusic(position: Int)
@@ -28,6 +30,7 @@ class AlbumInSongAdapter(private val albumList : ArrayList<Album_Locker>) : Recy
     override fun onCreateViewHolder(viewgroup: ViewGroup, viewType: Int): Viewholder {
         val binding: ItemSongfragmentBinding = ItemSongfragmentBinding.inflate(LayoutInflater.from(viewgroup.context),viewgroup,false)
 
+
         return Viewholder(binding)
     }
 
@@ -41,10 +44,16 @@ class AlbumInSongAdapter(private val albumList : ArrayList<Album_Locker>) : Recy
     override fun getItemCount(): Int = albumList.size
 
     class Viewholder (val binding: ItemSongfragmentBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(album: Album_Locker){
-            binding.albumSongNumTv.text = "0" + (album.coverImg!! +1).toString()
+        fun bind(album: Album_Song){
+            binding.albumSongNumTv.text = "0" + (album.position +1).toString()
             binding.albumMoretitleTv.text = album.title
             binding.albumMoresingerTv.text = album.singer
+            if(album.istitle){
+                binding.songIstitileTv.visibility = View.VISIBLE
+            }
+            else{
+                binding.songIstitileTv.visibility = View.GONE
+            }
         }
 
     }

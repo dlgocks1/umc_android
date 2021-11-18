@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/locker_savedsong_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,13 +16,25 @@
 
 
         <ImageView
-            android:id="@+id/locker_savedsong_sa_iv"
+            android:id="@+id/locker_savedsong_saoff_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/btn_playlist_select_off"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/locker_savedsong_saon_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_playlist_select_on"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -31,9 +44,9 @@
             android:text="전체 선택"
             android:textSize="13sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_sa_iv"
-            app:layout_constraintStart_toEndOf="@+id/locker_savedsong_sa_iv"
-            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_sa_iv" />
+            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_saoff_iv"
+            app:layout_constraintStart_toEndOf="@+id/locker_savedsong_saoff_iv"
+            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_saoff_iv" />
 
         <ImageView
             android:id="@+id/locker_savedsong_ra_iv"
@@ -48,12 +61,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="전체 선택"
+            android:text="전체 듣기"
             android:textSize="13sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_sa_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_saoff_iv"
             app:layout_constraintStart_toEndOf="@+id/locker_savedsong_ra_iv"
-            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_sa_iv" />
+            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_saoff_iv" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,9 +75,9 @@
             android:text="편집"
             android:textSize="13sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_sa_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/locker_savedsong_saoff_iv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_sa_iv" />
+            app:layout_constraintTop_toTopOf="@+id/locker_savedsong_saoff_iv" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -83,4 +96,5 @@
             <!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
             <!--            app:layout_constraintStart_toStartOf="parent"-->
             <!--            app:layout_constraintTop_toBottomOf="@+id/locker_savedsong_sa_iv"-->
+
 </LinearLayout>

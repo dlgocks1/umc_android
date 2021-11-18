@@ -15,7 +15,6 @@ class BannerViewpagerAdapter(fragment : Fragment) : FragmentStateAdapter(fragmen
 
 
     override fun createFragment(position: Int): Fragment {
-        Log.d("test",position.toString())
         return fragmentlist[position]
     }
 

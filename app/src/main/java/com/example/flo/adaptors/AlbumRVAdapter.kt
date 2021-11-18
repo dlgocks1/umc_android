@@ -1,13 +1,16 @@
 package com.example.flo.adaptors
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.flo.databinding.ItemAlbumBinding
 import com.example.flo.dataclass.Album
+import com.example.flo.dataclass.Song
 
 class AlbumRVAdapter(private var albumList: ArrayList<Album>) : RecyclerView.Adapter<AlbumRVAdapter.Viewholder>() {
+
 
     //쓸 함수를 인터페이스로정의
     interface MyItemClickListener{
@@ -49,8 +52,9 @@ class AlbumRVAdapter(private var albumList: ArrayList<Album>) : RecyclerView.Ada
         holder.binding.lockerSavedsongPlayIv.setOnClickListener{
             mItemClickListener.setminiplayer(albumList[position])
         }
-//        holder.binding.itemAlbumTitleTv.setOnClickListener{mItemClickListener.onRemoveAlbum(position)}
+//        holder.binding.itemAlbumTitleTv.setOnClickListener{mIt emClickListener.onRemoveAlbum(position)}
     }
+
 
     //데이터 세트 크기를 알려주는 함수 -> 리사이클러뷰가 마지막이 언제인지를 알게 된다.
     override fun getItemCount(): Int = albumList.size

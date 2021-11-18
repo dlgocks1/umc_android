@@ -6,9 +6,9 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
     android:id="@+id/item_album_cover_img_iv"
-    android:layout_width="135dp"
-    android:layout_height="135dp"
-    android:layout_marginLeft="20dp"
+    android:layout_width="160dp"
+    android:layout_height="160dp"
+    android:layout_marginLeft="15dp"
     android:layout_marginTop="10dp"
     android:scaleType="centerCrop"
     android:src="@drawable/img_album_exp2"
@@ -18,22 +18,22 @@
 
     <ImageView
         android:id="@+id/locker_savedsong_play_iv"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="5dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="7dp"
         android:src="@drawable/widget_black_play"
         app:layout_constraintBottom_toBottomOf="@id/item_album_cover_img_iv"
         app:layout_constraintEnd_toEndOf="@id/item_album_cover_img_iv" />
 
     <TextView
         android:id="@+id/item_album_title_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="LILAC"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:layout_marginTop="5dp"
+        android:text="말하자면 Remix"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
         android:textColor="@color/black"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="@id/item_album_cover_img_iv"
         app:layout_constraintTop_toBottomOf="@id/item_album_cover_img_iv" />
 
@@ -41,10 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/item_album_singer_tv"
-        android:text="아이유(IU)"
-        android:textAlignment="center"
-        android:layout_marginTop="3dp"
-        android:textSize="12sp"
+        android:text="pH-1 김성재(IU)"
+        android:textAlignment="viewStart"
+        android:singleLine="true"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/item_album_title_tv"
         app:layout_constraintTop_toBottomOf="@id/item_album_title_tv" />
 

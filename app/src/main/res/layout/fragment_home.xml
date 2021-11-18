@@ -21,7 +21,7 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_backimg_vp"
             android:layout_width="match_parent"
-            android:layout_height="430dp"
+            android:layout_height="410dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -89,7 +89,7 @@
             android:id="@+id/home_btn_setting_iv"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:scaleType="centerCrop"
             android:src="@drawable/btn_main_setting"
@@ -100,7 +100,7 @@
             android:id="@+id/btn_main_ticket"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:scaleType="centerInside"
             android:src="@drawable/btn_main_ticket"
@@ -111,7 +111,7 @@
             android:id="@+id/btn_main_nugu"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:scaleType="centerInside"
             android:src="@drawable/btn_nugu"
@@ -124,20 +124,21 @@
             android:id="@+id/home_todaymusic_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:fontFamily="sans-serif-condensed"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
             android:text="오늘 발매 음악"
             android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_mainimg_indicator" />
 
         <ImageView
-            android:layout_width="23sp"
-            android:layout_height="23sp"
+            android:layout_width="20sp"
+            android:layout_height="17sp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/btn_arrow_more"
+            android:rotation="270"
+            android:src="@drawable/nugu_btn_down"
             app:layout_constraintBottom_toBottomOf="@id/home_todaymusic_tv"
             app:layout_constraintStart_toEndOf="@id/home_todaymusic_tv"
             app:layout_constraintTop_toTopOf="@id/home_todaymusic_tv" />
@@ -148,39 +149,41 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="sans-serif-condensed"
             android:text="해외"
+            android:layout_marginTop="3dp"
             android:textColor="@color/gray"
-            android:textSize="17sp"
+            android:textSize="16.5sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_mainimg_indicator" />
+            app:layout_constraintTop_toTopOf="@id/home_todaymusic_tv" />
 
         <TextView
             android:id="@+id/home_todaymusic_domestic_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             android:fontFamily="sans-serif-condensed"
             android:text="국내"
+            android:layout_marginTop="3dp"
             android:textColor="@color/gray"
-            android:textSize="17sp"
+            android:textSize="16.5sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/home_todaymusic_abroad_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_mainimg_indicator" />
+            app:layout_constraintTop_toTopOf="@id/home_todaymusic_tv" />
 
         <TextView
             android:id="@+id/home_todaymusic_total_tv"
             android:layout_width="wrap_content"
+            android:layout_marginTop="3dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="17dp"
             android:fontFamily="sans-serif-condensed"
             android:text="종합"
-            android:textColor="@color/black"
-            android:textSize="17sp"
+            android:textColor="@color/light_blue2"
+            android:textSize="16.5sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/home_todaymusic_domestic_tv"
-            app:layout_constraintTop_toBottomOf="@id/home_mainimg_indicator" />
+            app:layout_constraintTop_toTopOf="@id/home_todaymusic_tv" />
 
 <!--        <HorizontalScrollView-->
 <!--            android:id="@+id/home_todaymusic_background_sv"-->
@@ -373,7 +376,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/home_today_music_recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="220dp"
             android:orientation="horizontal"
             tools:listitem="@layout/item_album"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

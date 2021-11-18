@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.flo.databinding.FragmentBannerBinding
 import com.example.flo.databinding.FragmentHomeimgBinding
 
-class HomeimgFragment(val typemain : Int,val imgRes : Int, val title : String,
+class HomeimgFragment(val typemain : Int,val imgRes : Int, val title : String, val subtitle: String = "",
                       val imgResalbum1: Int, val imgResalbum2: Int, val albumtitle1 : String, val albumtitle2: String,
                       val albumsinger1 : String, val albumsinger2: String, val infotext : String, val imgResalbum3 : Int = 1) : Fragment() {
     lateinit var binding : FragmentHomeimgBinding
@@ -34,6 +34,7 @@ class HomeimgFragment(val typemain : Int,val imgRes : Int, val title : String,
                 binding.homeInfotext.setText(infotext)
             }
             else->{
+                binding.homeBackgroundSubtitleTv.setText(subtitle)
                 binding.homeBackgroundMusicroundIv1.setImageResource(imgResalbum1)
                 binding.homeBackgroundMusicroundIv2.setImageResource(imgResalbum2)
                 binding.homeBackgroundMusicroundIv3.setImageResource(imgResalbum3)

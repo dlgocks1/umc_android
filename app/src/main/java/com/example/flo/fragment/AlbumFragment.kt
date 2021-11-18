@@ -18,7 +18,7 @@ import com.google.gson.Gson
 class AlbumFragment : Fragment() {
 
     lateinit var binding: FragmentAlbumBinding
-    val information = arrayListOf("수록곡","상세정보","영상")
+    val information = arrayListOf("  수록곡  ","  상세정보  ","  영상  ")
     private var gson: Gson = Gson()
 
     override fun onCreateView(
@@ -41,7 +41,7 @@ class AlbumFragment : Fragment() {
                 .commitNowAllowingStateLoss()
         }
 
-        val albumAdapter = AlbumViewparAdapter(this,album)
+        val albumAdapter = AlbumViewparAdapter(this,album.id)
         binding.albumContentVp.adapter = albumAdapter
 
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp){

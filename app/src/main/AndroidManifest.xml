@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SongActivity" />
+        <activity android:name=".activity.SheetdialogActivity" />
+
     </application>
 
 </manifest>

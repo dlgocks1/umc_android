@@ -16,8 +16,8 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="5dp"
-        android:minHeight="5dp"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
         android:id="@+id/main_song_seekbar"
         android:paddingStart="0dp"
         android:paddingEnd="0dp"
@@ -75,6 +75,7 @@
             android:gravity="center_vertical">
 
             <ImageView
+                android:id="@+id/main_previous_btn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/btn_miniplayer_previous" />
@@ -95,6 +96,7 @@
 
 
             <ImageView
+                android:id="@+id/main_next_btn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
 
@@ -126,5 +128,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/locker_sheetdialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:itemIconSize="30dp"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@color/light_blue2"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/locker_sheetdialog"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

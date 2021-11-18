@@ -3,5 +3,6 @@
     <string name="title_music">무야호</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="islike">좋아요 한 곡에 담겼습니다.</string>
+    <string name="isunlike">좋아요 한 곡이 취소되었습니다.</string>
 </resources>

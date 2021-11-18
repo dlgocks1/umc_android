@@ -33,28 +33,39 @@
         android:layout_marginRight="20dp"
         />
 
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/locker_text_tv"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:id="@+id/locker_horizontal_sv"-->
+<!--        android:layout_height="wrap_content">-->
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/locker_tablayout_tb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/locker_text_tv"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginEnd="200dp"
-        app:layout_constraintTop_toBottomOf="@+id/locker_text_tv"
         app:tabIndicatorColor="@color/light_blue2"
         app:tabIndicatorFullWidth="false"
 
+        android:scrollbars="none"
         app:tabIndicatorHeight="3dp"
         app:tabInlineLabel="true"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="20dp"
+        app:tabPaddingStart="20dp"
         app:tabRippleColor="#00ff0000"
-
         app:tabSelectedTextColor="@color/light_blue2"
         app:tabTextAppearance="@style/tab_text"
         app:tabTextColor="@color/song_gray" />
+<!--    </HorizontalScrollView>-->
 
 
     <androidx.viewpager2.widget.ViewPager2

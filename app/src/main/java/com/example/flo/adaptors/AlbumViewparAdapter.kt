@@ -8,14 +8,14 @@ import com.example.flo.fragment.DetailFragment
 import com.example.flo.fragment.SongFragment
 import com.example.flo.fragment.VideoFragment
 
-class AlbumViewparAdapter(fragment : Fragment,var albumconnect : Album) : FragmentStateAdapter(fragment){
+class AlbumViewparAdapter(fragment : Fragment,var albumid : Int) : FragmentStateAdapter(fragment){
 
-    var album : Album = albumconnect
+    private var album_id : Int = albumid
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
         return when(position){//when은 swich문과 동일
-            0 -> SongFragment(album)
+            0 -> SongFragment(album_id)
             1 ->  DetailFragment()
             else -> VideoFragment()
         }

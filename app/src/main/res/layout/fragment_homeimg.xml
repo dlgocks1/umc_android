@@ -17,6 +17,21 @@
         />
 
     <TextView
+        android:id="@+id/home_background_subtitle_tv"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text=""
+        android:lineSpacingExtra="-2dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeimg_iv"
+        android:layout_marginTop="70dp"
+        android:singleLine="true"
+        />
+
+    <TextView
         android:id="@+id/home_background_title_tv"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
@@ -28,7 +43,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/homeimg_iv"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
         />
 
     <ImageView
@@ -38,14 +53,14 @@
         android:scaleType="centerCrop"
         android:src="@drawable/btn_panel_play_large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_background_title_tv" />
+        app:layout_constraintTop_toTopOf="@id/home_background_title_tv" />
 
     <ImageView
         android:id="@+id/home_background_music_iv1"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="@id/homeimg_iv"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -82,7 +97,7 @@
         android:layout_height="125dp"
         android:scaleType="centerCrop"
         app:riv_corner_radius="150dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/home_background_musicround_iv1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/home_background_musicround_iv1"
@@ -95,7 +110,7 @@
         android:layout_height="125dp"
         android:scaleType="centerCrop"
         app:riv_corner_radius="150dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="90dp"
         app:layout_constraintBottom_toBottomOf="@+id/home_background_musicround_iv1"
         app:layout_constraintStart_toStartOf="@+id/home_background_musicround_iv1"
         app:layout_constraintTop_toTopOf="@+id/home_background_musicround_iv1"
@@ -108,7 +123,7 @@
         android:id="@+id/home_background_musicround_iv1"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="40dp"
         android:scaleType="centerCrop"
         app:riv_corner_radius="150dp"
 
@@ -122,6 +137,7 @@
         android:id="@+id/home_infotext2"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        android:layout_marginStart="-10dp"
         android:text=" "
         android:textColor="@color/white"
         android:textSize="14sp"
