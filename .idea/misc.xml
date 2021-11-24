@@ -70,20 +70,30 @@
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/bg_appcolor.xml" value="0.21435185185185185" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/bg_appcolorgray.xml" value="0.21435185185185185" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/blue_indicator.xml" value="0.2953703703703704" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/border_black.xml" value="0.2462962962962963" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/gray_indicator.xml" value="0.2953703703703704" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/round_blue.xml" value="0.21435185185185185" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/round_white.xml" value="0.2462962962962963" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/seekbar.xml" value="0.21435185185185185" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/drawable/selector_indicator.xml" value="0.2462962962962963" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_login.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_main.xml" value="0.2311965811965812" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_sheetdialog.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_signin.xml" value="0.33" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_song.xml" value="0.22" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/activity_splash.xml" value="0.19490740740740742" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_album.xml" value="0.33" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_homeimg.xml" value="0.2128623188405797" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_locker.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_savedalbum.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_savedsong.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_signin.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/fragment_song.xml" value="0.2128623188405797" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/item_album.xml" value="0.5" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/item_locker.xml" value="0.20213675213675214" />
+        <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/item_locker_album.xml" value="0.33" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/item_songfragment.xml" value="0.25" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/layout/toast_islike.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/cksgo/Desktop/UMC_Android/ClonProject3/flo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22083333333333333" />

@@ -1,9 +1,7 @@
 package com.example.flo.locker
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +9,9 @@ import androidx.fragment.app.Fragment
 import com.example.flo.R
 import com.example.flo.adaptors.AlbumLockerRVAdapter
 import com.example.flo.databinding.FragmentSavedsongBinding
-import com.example.flo.dataclass.Album
-import com.example.flo.dataclass.Album_Locker
-import com.example.flo.dataclass.Song
 import com.example.flo.dataclass.SongDatabase
-import android.content.Intent
 import android.graphics.Color
-import com.example.flo.R.color.light_blue2
 import com.example.flo.activity.MainActivity
-import com.example.flo.activity.SheetdialogActivity
 
 
 class SavedsongFragment(var issel: Boolean) : Fragment() {

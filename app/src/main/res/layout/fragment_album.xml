@@ -127,7 +127,7 @@
                         android:layout_width="31dp"
                         android:layout_height="31dp"
                         android:layout_marginTop="8dp"
-
+                        android:id="@+id/album_islike_iv"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/ic_my_like_off"
                         app:layout_constraintEnd_toStartOf="@+id/album_moreinfo_iv"

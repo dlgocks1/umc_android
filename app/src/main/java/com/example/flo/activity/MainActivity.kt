@@ -1,16 +1,14 @@
 package com.example.flo.activity
 
+import android.app.Activity
 import android.content.*
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.fragment.app.Fragment
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flo.*
 import com.example.flo.databinding.ActivityMainBinding
@@ -18,12 +16,10 @@ import com.example.flo.dataclass.Album
 import com.example.flo.dataclass.Song
 import com.example.flo.dataclass.SongDatabase
 import com.example.flo.fragment.HomeFragment
-import com.example.flo.fragment.LockerFragment
+import com.example.flo.locker.LockerFragment
 import com.example.flo.fragment.LookFragment
 import com.example.flo.fragment.SearchFragment
 import com.example.flo.locker.SavedsongFragment
-import com.google.gson.Gson
-import java.text.FieldPosition
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     var threadcondition = false //쓰레드컨디션
     lateinit var player: Player //쓰레드
     var ontouchnow : Boolean = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

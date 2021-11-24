@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:id="@+id/signin_signin_tv"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/signin_nickname_ev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="닉네임"
+        android:paddingVertical="15dp"
+        android:layout_marginHorizontal="30dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/signin_connector_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_signin_tv" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중복된 닉네임 입니다."
+        android:id="@+id/signin_nicknamechekc_tv"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/signin_nickname_ev"
+        app:layout_constraintStart_toStartOf="@id/signin_nickname_ev"
+        android:textColor="@color/red"
+        />
+    <!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="중복체크"-->
+
+
+    <EditText
+        android:id="@+id/signin_email_ev"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="아이디(이메일)"
+        android:paddingVertical="15dp"
+        android:textSize="15sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toStartOf="@id/signin_connector_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_nickname_ev" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="중복된 이메일 입니다."
+        android:id="@+id/signin_emailcheck_tv"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/signin_email_ev"
+        app:layout_constraintStart_toStartOf="@id/signin_email_ev"
+        android:textColor="@color/red"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin_connector_tv"
+        app:layout_constraintStart_toEndOf="@id/signin_email_ev"
+        app:layout_constraintEnd_toStartOf="@id/signin_emailadr_ed"
+        app:layout_constraintTop_toTopOf="@id/signin_email_ev"
+        app:layout_constraintBottom_toBottomOf="@id/signin_email_ev"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        android:text="\u0040"/>
+    <EditText
+        android:id="@+id/signin_emailadr_ed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="직접입력"
+        android:textSize="15sp"
+        android:paddingVertical="15dp"
+        app:layout_constraintTop_toTopOf="@id/signin_email_ev"
+        app:layout_constraintStart_toEndOf="@+id/signin_connector_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/signin_arrowdown_iv"
+        android:src="@drawable/btn_arrow_more"
+        app:layout_constraintTop_toTopOf="@+id/signin_emailadr_ed"
+        app:layout_constraintBottom_toBottomOf="@+id/signin_emailadr_ed"
+        app:layout_constraintEnd_toEndOf="@+id/signin_emailadr_ed"
+        android:rotation="90"
+        />
+
+    <EditText
+        android:id="@+id/signin_pw_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:textSize="15sp"
+        android:paddingVertical="15dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/signin_email_ev"
+        android:layout_marginHorizontal="30dp"
+        />
+
+    <ImageView
+
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/signin_seepw_iv"
+        android:src="@drawable/btn_input_password"
+        app:layout_constraintTop_toTopOf="@+id/signin_pw_ed"
+        app:layout_constraintBottom_toBottomOf="@id/signin_pw_ed"
+        app:layout_constraintEnd_toEndOf="@id/signin_pw_ed"
+        />
+
+    <EditText
+        android:inputType="textPassword"
+
+        android:id="@+id/signin_pwcheck_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호 확인"
+        android:paddingVertical="15dp"
+        android:textSize="15sp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/signin_pw_ed"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="30dp"
+        />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/signin_seepw_iv2"
+        android:src="@drawable/btn_input_password"
+        app:layout_constraintTop_toTopOf="@+id/signin_pwcheck_ed"
+        app:layout_constraintBottom_toBottomOf="@id/signin_pwcheck_ed"
+        app:layout_constraintEnd_toEndOf="@id/signin_pwcheck_ed"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:text="가입완료"
+        android:id="@+id/signin_bt"
+        android:textSize="15sp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="-8dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

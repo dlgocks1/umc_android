@@ -23,15 +23,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="로그인"
+        android:textStyle="bold"
         android:id="@+id/locker_login_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/locker_text_tv"
         app:layout_constraintBottom_toBottomOf="@+id/locker_text_tv"
         android:layout_marginBottom="5dp"
         android:textColor="@color/blue"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:layout_marginRight="20dp"
         />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/profile_img"
+        android:id="@+id/locker_profile_iv"
+        app:layout_constraintEnd_toStartOf="@+id/locker_login_tv"
+        app:layout_constraintTop_toTopOf="@+id/locker_login_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/locker_login_tv"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locker_nickname_tv"
+        android:text="평창보리"
+        app:layout_constraintEnd_toStartOf="@+id/locker_profile_iv"
+        app:layout_constraintTop_toTopOf="@+id/locker_profile_iv"
+        app:layout_constraintBottom_toBottomOf="@+id/locker_profile_iv"
+        android:layout_marginEnd="10dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+
 
 <!--    <HorizontalScrollView-->
 <!--        android:layout_width="match_parent"-->
