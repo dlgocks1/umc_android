@@ -2,9 +2,12 @@ package com.example.flo.fragment
 
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
@@ -69,10 +72,29 @@ class AlbumFragment : Fragment() {
         if (isLiked) {
             binding.albumIslikeIv.setImageResource(R.drawable.ic_my_like_on)
             likeAlbum(userId, album.id)
+            ToastIsLike(isLiked)
         } else {
             binding.albumIslikeIv.setImageResource(R.drawable.ic_my_like_off)
             disLikedAlbum(userId, album.id)
+            ToastIsLike(isLiked)
         }
+    }
+
+    private fun ToastIsLike(islike : Boolean) {
+//        var toasttx: TextView? = v1.findViewById(R.id.islike_toast_tv)
+        if(islike){
+            var toast = Toast(requireContext())!!
+
+            var v1 = layoutInflater.inflate(R.layout.toast_islike_img,null)
+            toast.view = v1
+            toast.setGravity(0, Gravity.CENTER, Gravity.CENTER)
+            toast.duration = Toast.LENGTH_SHORT
+            toast.show()
+        }
+//        else{
+//            toasttx?.setText("시러요")
+//        }
+
     }
 
 

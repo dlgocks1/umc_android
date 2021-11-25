@@ -141,7 +141,7 @@ class SongActivity : AppCompatActivity() {
 
     private fun ToastIsLike(islike : Boolean) {
         var toast = Toast(this)
-        var v1 = layoutInflater.inflate(R.layout.toast_islike, null)
+        var v1 = layoutInflater.inflate(R.layout.toast_islike,null)
         var toasttx: TextView? = v1.findViewById(R.id.islike_toast_tv)
         if(islike){
             toasttx?.setText(R.string.islike)

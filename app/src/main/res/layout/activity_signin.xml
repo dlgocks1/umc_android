@@ -121,6 +121,18 @@
         android:layout_marginHorizontal="30dp"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="숫자, 문자, 특수문자 모두 포함해야합니다. (8~15자)"
+        android:id="@+id/signin_pwcheck_tv"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/signin_pw_ed"
+        app:layout_constraintStart_toStartOf="@+id/signin_pw_ed"
+        android:textColor="@color/red"
+        />
+
+
     <ImageView
 
         android:layout_width="25dp"
@@ -146,6 +158,18 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginHorizontal="30dp"
         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호가 일치해야 합니다."
+        android:id="@+id/signin_pwc2heck_tv"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/signin_pwcheck_ed"
+        app:layout_constraintStart_toStartOf="@+id/signin_pwcheck_ed"
+        android:textColor="@color/red"
+        />
+
     <ImageView
         android:layout_width="25dp"
         android:layout_height="25dp"
