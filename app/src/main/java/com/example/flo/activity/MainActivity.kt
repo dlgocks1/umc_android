@@ -275,33 +275,32 @@ class MainActivity : AppCompatActivity() {
     private fun inputDummyAlbums() {
         //SongDB = SongDatabase.getInstance(this)!!
         val albums = SongDB.albumDao().getAlbums()
-
         if (albums.isNotEmpty()) return
 
         SongDB.albumDao().insert(
             Album(
-                1,
+                4,
                 "IU 5th Album 'LILAC'", "아이유 (IU)", R.drawable.img_album_exp2
             )
         )
 
         SongDB.albumDao().insert(
             Album(
-                2,
+                5,
                 "GLASSY", "조유리", R.drawable.album_img2
             )
         )
 
         SongDB.albumDao().insert(
             Album(
-                3,
+                6,
                 "잊혀진 계절", "The One(더원)", R.drawable.album_img3
             )
         )
 
         SongDB.albumDao().insert(
             Album(
-                4,
+                7,
                 "WOO", "27RING", R.drawable.album_img4
             )
         )
@@ -314,16 +313,16 @@ class MainActivity : AppCompatActivity() {
 
         if(songs.isNotEmpty()) return
 
-        SongDB.SongDao().insert(Song("music_lilac","라일락","아이유(IU)",true,0,212,false, 0,false,1,R.drawable.img_album_exp2))
-        SongDB.SongDao().insert(Song("music_flu","Flu","아이유(IU)",false,0,189,false, 0,false,1,R.drawable.img_album_exp2))
-        SongDB.SongDao().insert(Song("music_coin","Coin","아이유(IU)",false,0,223,false, 0,false,1,R.drawable.img_album_exp2))
-        SongDB.SongDao().insert(Song("music_sayspringsay","봄 안녕 봄","아이유(IU)",false,0,325,false, 0,false,1,R.drawable.img_album_exp2))
-        SongDB.SongDao().insert(Song("music_celebrity","Celebrity","아이유(IU)",true,0,196,false, 0,false,1,R.drawable.img_album_exp2))
-        SongDB.SongDao().insert(Song("music_glassy","GLASSY","조유리",true,0,190,false, 0,false, 2,R.drawable.album_img2))
-        SongDB.SongDao().insert(Song("music_expressmoon","Express Moon","조유리",false,0,185,false, 0,false, 2,R.drawable.album_img2))
-        SongDB.SongDao().insert(Song("music_fallbox","가을 상자(With 이석훈)","조유리",false,0,267,false, 0,false, 2,R.drawable.album_img2))
-        SongDB.SongDao().insert(Song("music_forgottenseason","잊혀진 계절","The One (더원)",true,0,251,false, 0,false, 3,R.drawable.album_img3))
-        SongDB.SongDao().insert(Song("music_woo","WOO","27RING",true,0,141,false, 0,false, 4,R.drawable.album_img4))
+        SongDB.SongDao().insert(Song("music_lilac","라일락","아이유(IU)",true,0,212,false, 0,false,4,R.drawable.img_album_exp2))
+        SongDB.SongDao().insert(Song("music_flu","Flu","아이유(IU)",false,0,189,false, 0,false,4,R.drawable.img_album_exp2))
+        SongDB.SongDao().insert(Song("music_coin","Coin","아이유(IU)",false,0,223,false, 0,false,4,R.drawable.img_album_exp2))
+        SongDB.SongDao().insert(Song("music_sayspringsay","봄 안녕 봄","아이유(IU)",false,0,325,false, 0,false,4,R.drawable.img_album_exp2))
+        SongDB.SongDao().insert(Song("music_celebrity","Celebrity","아이유(IU)",true,0,196,false, 0,false,4,R.drawable.img_album_exp2))
+        SongDB.SongDao().insert(Song("music_glassy","GLASSY","조유리",true,0,190,false, 0,false, 5,R.drawable.album_img2))
+        SongDB.SongDao().insert(Song("music_expressmoon","Express Moon","조유리",false,0,185,false, 0,false, 5,R.drawable.album_img2))
+        SongDB.SongDao().insert(Song("music_fallbox","가을 상자(With 이석훈)","조유리",false,0,267,false, 0,false, 5,R.drawable.album_img2))
+        SongDB.SongDao().insert(Song("music_forgottenseason","잊혀진 계절","The One (더원)",true,0,251,false, 0,false, 6,R.drawable.album_img3))
+        SongDB.SongDao().insert(Song("music_woo","WOO","27RING",true,0,141,false, 0,false, 7,R.drawable.album_img4))
 
     }
 
@@ -339,7 +338,7 @@ class MainActivity : AppCompatActivity() {
         mediaplayer = null //미디어플레이어 해제
 
         val SongDB = SongDatabase.getInstance(this)
-        songlist = SongDB!!.SongDao().getSongInAlbum(album.id) as ArrayList<Song>
+        songlist = SongDB!!.SongDao().getSongInAlbum(album.albumIdx) as ArrayList<Song>
         nowPos = position
         song = songlist[nowPos]
         song.isPlaying = true
@@ -357,7 +356,7 @@ class MainActivity : AppCompatActivity() {
     private fun nextSong(){
         var position :Int = 0
         val SongDB = SongDatabase.getInstance(this)!!
-        songlist = SongDB!!.SongDao().getSongInAlbum(album.id) as ArrayList<Song>
+        songlist = SongDB!!.SongDao().getSongInAlbum(album.albumIdx) as ArrayList<Song>
 
 
         for (i in 0..songlist.size-1){
@@ -438,10 +437,10 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         //val SongDB = SongDatabase.getInstance(this)!!
         val album_gtf = getSharedPreferences("albumId", MODE_PRIVATE)  //앨범 받아오기
-        val albumId = album_gtf.getInt("albumId",0)
-        album = if(albumId == 0){
+        val albumId = album_gtf.getInt("albumId",4)
+        album = if(albumId == 4){
             Album(
-                2,
+                5,
                 "GLASSY", "조유리", R.drawable.album_img2
             )
         }
@@ -449,7 +448,7 @@ class MainActivity : AppCompatActivity() {
             SongDB.albumDao().getAlbum(albumId)
         }
 
-        songlist = SongDB!!.SongDao().getSongInAlbum(album.id) as ArrayList<Song>
+        songlist = SongDB!!.SongDao().getSongInAlbum(album.albumIdx) as ArrayList<Song>
         val spf =  getSharedPreferences("songId", MODE_PRIVATE) // Song 받아오기
         val songId = spf.getInt("songId",0)
         song = if(songId == 0){
@@ -485,13 +484,15 @@ class MainActivity : AppCompatActivity() {
 
         var spf = getSharedPreferences("albumId", MODE_PRIVATE)
         var editor : SharedPreferences.Editor = spf.edit() // sharedPreferences 를 조작할 때 사용
-        editor.putInt("albumId",album.id) // 자바 객체를 string으로 바꿔서 한번에 넣음
+        editor.putInt("albumId",album.albumIdx) // 자바 객체를 string으로 바꿔서 한번에 넣음
         editor.commit()
 
         spf =  getSharedPreferences("songId", MODE_PRIVATE)
         editor = spf.edit() // sharedPreferences 를 조작할 때 사용
         editor.putInt("songId",song.id) // 자바 객체를 string으로 바꿔서 한번에 넣음
         editor.commit()
+
+
 
     }
 

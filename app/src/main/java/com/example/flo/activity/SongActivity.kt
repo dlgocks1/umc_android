@@ -209,7 +209,6 @@ class SongActivity : AppCompatActivity() {
     }
 
     fun setPlayer(){
-
         song = songlist[nowPos]
         song.isPlaying = true
         mediaplayer?.seekTo(song.now_mil)
@@ -259,7 +258,7 @@ class SongActivity : AppCompatActivity() {
             SongDB.SongDao().getSong(songId)
         }
         
-        songlist = SongDB!!.SongDao().getSongInAlbum(album.id) as ArrayList<Song>
+        songlist = SongDB!!.SongDao().getSongInAlbum(album.albumIdx) as ArrayList<Song>
         nowPos = getPlayingSongPosition()
         song = songlist[nowPos]
     }
@@ -373,7 +372,7 @@ class SongActivity : AppCompatActivity() {
 
         var spf = getSharedPreferences("albumId", MODE_PRIVATE)
         var editor : SharedPreferences.Editor = spf.edit() //
-        editor.putInt("albumId",album.id)
+        editor.putInt("albumId",album.albumIdx)
         editor.commit()
 
 

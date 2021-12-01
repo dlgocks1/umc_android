@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.flo.Service.getUserIdx
 import com.example.flo.activity.LoginActivity
 import com.example.flo.activity.MainActivity
 import com.example.flo.adaptors.LockerViewAdapter
@@ -47,7 +48,7 @@ class LockerFragment(var isselect : Boolean) : Fragment() {
     }
 
     private fun initView(){
-        val jwt = getJwt()
+        val jwt = getUserIdx(requireContext())
         val userDB = SongDatabase.getInstance(requireContext())!!
         if(jwt == 0){
             binding.lockerLoginTv.text = "로그인"
@@ -63,18 +64,19 @@ class LockerFragment(var isselect : Boolean) : Fragment() {
             binding.lockerLoginTv.setOnClickListener {
                 logout()
                 (activity as MainActivity).finish()
-                startActivity(Intent(activity, MainActivity::class.java))
+                startActivity(Intent(activity, LoginActivity::class.java))
             }
             binding.lockerNicknameTv.visibility = View.VISIBLE
             binding.lockerProfileIv.visibility = View.VISIBLE
-            binding.lockerNicknameTv.text = userDB.UserDao().getNicknameByid(jwt)
+            binding.lockerNicknameTv.text = getUserIdx(requireContext()).toString() + "번째 손님"
+//            binding.lockerNicknameTv.text = userDB.UserDao().getNicknameByid(jwt)
         }
     }
 
-    private fun getJwt(): Int {
-        val spf = activity?.getSharedPreferences("auth",AppCompatActivity.MODE_PRIVATE)
-        return spf!!.getInt("jwt",0)
-    }
+//    private fun getJwt(): Int {
+//        val spf = activity?.getSharedPreferences("auth",AppCompatActivity.MODE_PRIVATE)
+//        return spf!!.getInt("jwt",0)
+//    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -88,9 +90,14 @@ class LockerFragment(var isselect : Boolean) : Fragment() {
     }
 
     private fun logout(){
-        val spf = activity?.getSharedPreferences("auth",AppCompatActivity.MODE_PRIVATE)
-        val editor = spf!!.edit()
+        var spf = activity?.getSharedPreferences("auth",AppCompatActivity.MODE_PRIVATE)
+        var editor = spf!!.edit()
         editor.remove("jwt")
+        editor.commit()
+
+        spf = activity?.getSharedPreferences("auth",AppCompatActivity.MODE_PRIVATE)
+        editor = spf!!.edit()
+        editor.remove("userIdx")
         editor.commit()
     }
 

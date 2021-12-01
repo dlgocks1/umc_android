@@ -36,9 +36,9 @@ class AlbumInSongAdapter(private val albumList : ArrayList<Album_Song>) : Recycl
 
     override fun onBindViewHolder(holder: Viewholder, position: Int) {
         holder.bind(albumList[position])
-        holder.binding.albumSongplayIv1.setOnClickListener{
-            mItemClickListener.onChangeMusic(position)
-        }
+//        holder.binding.albumSongplayIv1.setOnClickListener{
+//            mItemClickListener.onChangeMusic(position)
+//        }
     }
 
     override fun getItemCount(): Int = albumList.size
@@ -48,7 +48,7 @@ class AlbumInSongAdapter(private val albumList : ArrayList<Album_Song>) : Recycl
             binding.albumSongNumTv.text = "0" + (album.position +1).toString()
             binding.albumMoretitleTv.text = album.title
             binding.albumMoresingerTv.text = album.singer
-            if(album.istitle){
+            if(album.istitle || album.isTitleSong == "T"){
                 binding.songIstitileTv.visibility = View.VISIBLE
             }
             else{

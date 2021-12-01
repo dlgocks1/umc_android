@@ -396,6 +396,29 @@
             android:layout_marginBottom="20dp"
             />
 
+        <TextView
+            android:id="@+id/home_recommedntoday_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="당신만을 위한 추천곡"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_banner_vp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recommedntoday_rv"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_album"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_recommedntoday_tv"
+            />
 
         <TextView
             android:id="@+id/home_podcast_tv"
@@ -405,11 +428,11 @@
             android:fontFamily="sans-serif-condensed"
             android:text="매일 들어도 좋은 팟캐스트"
             android:textColor="@color/black"
-            android:textSize="17sp"
-            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="25dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_banner_vp" />
+            app:layout_constraintTop_toBottomOf="@+id/home_recommedntoday_rv" />
 
         <HorizontalScrollView
             android:id="@+id/home_podcast_background_sv"

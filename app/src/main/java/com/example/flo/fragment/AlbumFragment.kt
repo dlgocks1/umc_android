@@ -11,7 +11,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.flo.R
+import com.example.flo.Service.getUserIdx
 import com.example.flo.activity.MainActivity
 import com.example.flo.adaptors.AlbumViewparAdapter
 import com.example.flo.databinding.FragmentAlbumBinding
@@ -40,12 +42,22 @@ class AlbumFragment : Fragment() {
         //번들 받아오기
         val albumData = arguments?.getString("album")
         val album = gson.fromJson(albumData, Album::class.java)
+
         //Home에서 넘어온 데이터들 반영
-        isLiked = isLikedAlbum(album.id)
-
         setInit(album)
-        //setClickListeners(album)
+        SetClickListener(album)
 
+        //수록곡, 상세정보 영상 Tb
+        val albumAdapter = AlbumViewparAdapter(this, album.albumIdx)
+        binding.albumContentVp.adapter = albumAdapter
+        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
+            tab.text = information[position]
+        }.attach()
+
+        return binding.root
+    }
+
+    private fun SetClickListener(album: Album) {
         binding.albumArrowbackIv.setOnClickListener {
             (context as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.main_frm, HomeFragment())
@@ -54,28 +66,19 @@ class AlbumFragment : Fragment() {
 
         binding.albumIslikeIv.setOnClickListener {
             isLiked = !isLiked
-            setClickListeners(album)
+            setAlbumIslike(album)
         }
-
-        val albumAdapter = AlbumViewparAdapter(this, album.id)
-        binding.albumContentVp.adapter = albumAdapter
-
-        TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
-            tab.text = information[position]
-        }.attach()
-
-        return binding.root
     }
 
-    private fun setClickListeners(album: Album) {
-        val userId: Int = getJwt()
+    private fun setAlbumIslike(album: Album) {
+        val userId: Int = getUserIdx(requireContext())
         if (isLiked) {
             binding.albumIslikeIv.setImageResource(R.drawable.ic_my_like_on)
-            likeAlbum(userId, album.id)
+            likeAlbum(userId, album.albumIdx)
             ToastIsLike(isLiked)
         } else {
             binding.albumIslikeIv.setImageResource(R.drawable.ic_my_like_off)
-            disLikedAlbum(userId, album.id)
+            disLikedAlbum(userId, album.albumIdx)
             ToastIsLike(isLiked)
         }
     }
@@ -107,7 +110,7 @@ class AlbumFragment : Fragment() {
 
     private fun isLikedAlbum(albumId: Int): Boolean {
         val songDB = SongDatabase.getInstance(requireContext())!!
-        val userId = getJwt()
+        val userId = getUserIdx(requireContext())
         var likeId: Int? = songDB.albumDao().isLikeAlbum(userId, albumId)
         return likeId != null
     }
@@ -118,7 +121,17 @@ class AlbumFragment : Fragment() {
     }
 
     private fun setInit(album: Album) {
-        binding.albumMainimgIv.setImageResource(album.coverImg!!)
+        isLiked = isLikedAlbum(album.albumIdx)
+        if(album.coverImg != null){
+            binding.albumMainimgIv.setImageResource(album.coverImg!!)
+        }
+        if(album.coverImgUrl != null){
+            val media = album.coverImgUrl
+            if (media !== null) {
+                //context를 넣음?
+                Glide.with(binding.albumMainimgIv).load(media).into(binding.albumMainimgIv)
+            }
+        }
         binding.albumTitleSongTv.text = album.title.toString()
         binding.albumSingerSongTv.text = album.singer.toString()
 
@@ -129,9 +142,9 @@ class AlbumFragment : Fragment() {
         }
     }
 
-    private fun getJwt(): Int {
-        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
-        return spf!!.getInt("jwt", 0)
-    }
+//    private fun getJwt(): Int {
+//        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
+//        return spf!!.getInt("jwt", 0)
+//    }
 }
 

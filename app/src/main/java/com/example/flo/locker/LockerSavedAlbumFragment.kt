@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.flo.Service.getUserIdx
 import com.example.flo.adaptors.AlbumIsLikedLockerRVAdapter
 import com.example.flo.adaptors.LockerViewAdapter
 import com.example.flo.databinding.FragmentSavedalbumBinding
@@ -23,7 +24,7 @@ class LockerSavedAlbumFragment : Fragment() {
     ): View? {
         binding = FragmentSavedalbumBinding.inflate(inflater,container,false)
         val songDB = SongDatabase.getInstance(requireContext())!!
-        var userId = getJwt()
+        var userId = getUserIdx(requireContext())
 
         val likealbumadapte = AlbumIsLikedLockerRVAdapter()
         binding.lockerSavedalbumRv.adapter = likealbumadapte
@@ -33,9 +34,5 @@ class LockerSavedAlbumFragment : Fragment() {
         return binding.root
     }
 
-    private fun getJwt(): Int {
-        val spf = activity?.getSharedPreferences("auth", AppCompatActivity.MODE_PRIVATE)
-        return spf!!.getInt("jwt",0)
-    }
 
 }

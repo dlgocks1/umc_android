@@ -15,13 +15,13 @@ interface UserDao {
     @Query("SELECT * FROM UserTable WHERE email = :email AND password = :password")
     fun getUser(email: String, password: String) : User?
 
-    @Query("SELECT id FROM UserTable WHERE nickname = :nickname")
+    @Query("SELECT id FROM UserTable WHERE name = :nickname")
     fun duplecheck_nickname(nickname : String) : Int?
 
     @Query("SELECT id FROM UserTable WHERE email = :email")
     fun duplecheck_email(email : String) : Int?
 
-    @Query("SELECT nickname FROM UserTable WHERE id = :id")
+    @Query("SELECT name FROM UserTable WHERE id = :id")
     fun getNicknameByid(id: Int) : String
 
 

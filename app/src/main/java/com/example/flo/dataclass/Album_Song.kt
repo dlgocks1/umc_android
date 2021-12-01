@@ -5,5 +5,6 @@ data class Album_Song(
     var title: String = "",
     var singer: String = "",
     var position : Int = 0,
-    var istitle : Boolean = false
+    var istitle : Boolean = false,
+    val isTitleSong : String? = "F",
 )
