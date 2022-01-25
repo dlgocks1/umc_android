@@ -19,12 +19,13 @@ class SplashActivity : AppCompatActivity(), SignUpView {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
-
-            val authService = AuthService()
-            authService.setSignUpView(this)
-            authService.autologin(getJwt(this))
+            //val authService = AuthService()
+            //authService.setSignUpView(this)
+            //authService.autologin(getJwt(this))
             //Log.d("splash",getJwt(this).toString())
 
+            var intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             //var intent = Intent(this, MainActivity::class.java)
             //startActivity(intent)
             //네트워킹 처리, 데이터 처리를 요기서 할수 있을듯

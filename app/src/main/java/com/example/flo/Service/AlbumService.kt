@@ -83,33 +83,33 @@ class AlbumService {
         })
     }
 
-    fun getAlbum(){
-        val authService = getReposit().create(AlbumRetrofitInterface::class.java)
-
-        albumView.onGetAlbumLoading()
-
-        authService.getalbums().enqueue(object : Callback<AlbumResponse_revise> {
-            @SuppressLint("LongLogTag")
-            override fun onResponse(call: Call<AlbumResponse_revise>, response: Response<AlbumResponse_revise>) {
-                Log.d("GETALBUMACT/API-RESPONCE",response.toString())
-
-                val resp = response.body()!!
-                Log.d("GETALBUMACT/API-RESPONCE_FLO", resp.toString())
-                when(resp.code){
-                    1000 -> albumView.onGetAlbumSuccess(resp.result)
-                    else -> {
-                        albumView.onGetAlbumFailure(resp.code, resp.message)
-                    }
-
-                }
-            }
-
-            override fun onFailure(call: Call<AlbumResponse_revise>, t: Throwable) {
-                Log.d("GETALBUMACT/API-ERROR",t.message.toString())
-                albumView.onGetAlbumFailure(400,"네트워크 오류가 발생했습니다.")
-            }
-
-
-        })
-    }
+//    fun getAlbum(){
+//        val authService = getReposit().create(AlbumRetrofitInterface::class.java)
+//
+//        albumView.onGetAlbumLoading()
+//
+//        authService.getalbums().enqueue(object : Callback<AlbumResponse_revise> {
+//            @SuppressLint("LongLogTag")
+//            override fun onResponse(call: Call<AlbumResponse_revise>, response: Response<AlbumResponse_revise>) {
+//                Log.d("GETALBUMACT/API-RESPONCE",response.toString())
+//
+//                val resp = response.body()!!
+//                Log.d("GETALBUMACT/API-RESPONCE_FLO", resp.toString())
+//                when(resp.code){
+//                    1000 -> albumView.onGetAlbumSuccess(resp.result)
+//                    else -> {
+//                        albumView.onGetAlbumFailure(resp.code, resp.message)
+//                    }
+//
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<AlbumResponse_revise>, t: Throwable) {
+//                Log.d("GETALBUMACT/API-ERROR",t.message.toString())
+//                albumView.onGetAlbumFailure(400,"네트워크 오류가 발생했습니다.")
+//            }
+//
+//
+//        })
+//    }
 }

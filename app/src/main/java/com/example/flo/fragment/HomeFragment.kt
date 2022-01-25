@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
         var albumServicemanager = getAlbumManager()
         val albumService = AlbumService()
         albumService.setalbumView(albumServicemanager)
-        albumService.getAlbum()
+        //albumService.getAlbum()
 
         return binding.root
     }

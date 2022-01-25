@@ -21,6 +21,7 @@ import com.example.flo.dataclass.Album
 import com.example.flo.dataclass.Like
 import com.example.flo.dataclass.Song
 import com.example.flo.dataclass.SongDatabase
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 
@@ -53,6 +54,20 @@ class AlbumFragment : Fragment() {
         TabLayoutMediator(binding.albumContentTb, binding.albumContentVp) { tab, position ->
             tab.text = information[position]
         }.attach()
+
+//        binding.albumContentTb.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+//            override fun onTabSelected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onTabUnselected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onTabReselected(tab: TabLayout.Tab?) {
+//                TODO("Not yet implemented")
+//            }
+//        })
 
         return binding.root
     }

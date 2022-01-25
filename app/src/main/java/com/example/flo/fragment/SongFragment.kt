@@ -48,7 +48,7 @@ class SongFragment(album_id: Int) : Fragment() {
         var songServicemanager = getSongManaer()
         val albumService = AlbumService()
         albumService.setsongView(songServicemanager)
-        albumService.getSongsbyAlbumindex(albumid)
+        //albumService.getSongsbyAlbumindex(albumid)
 
         var albuminsongAdapter = AlbumInSongAdapter(albumDatas)
         binding.songWidgetRcv.adapter= albuminsongAdapter

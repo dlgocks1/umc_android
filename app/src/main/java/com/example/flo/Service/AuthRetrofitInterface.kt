@@ -13,7 +13,7 @@ interface AuthRetrofitInterface {
     fun signUp(@Body user: User): Call<AuthResponse>
     //함수(바디에보낼것) : 결과로 받을 것
 
-    @POST("/users/login")
+    @POST("/users/login")// 12.52.215.12/users/login
     fun login(@Body user: User) : Call<AuthResponse>
 
     @GET("/users/auto-login")
